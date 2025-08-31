@@ -1,15 +1,23 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { articles } from "../data/articles";
 
 export default function ArticleDetail() {
   const { id } = useParams();
-  const article = articles.find(a => a.id === Number(id));
+  const navigate = useNavigate();
+  const article = articles.find(a => a.id === id);
 
   if (!article) return <div className="p-6">Статья не найдена</div>;
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">{article.title}</h1>
+    <div className="max-w-4xl mx-auto">
+      <button
+        onClick={() => navigate(-1)}
+        className="mb-6 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+      >
+        ← Back
+      </button>
+
+      <h1 className="text-3xl font-bold mb-2">{article.title}</h1>
       <div className="mb-4">{article.summary}</div>
 
       {article.pdf ? (
