@@ -6,5 +6,4 @@ export const articles = [
     pdf: "/articles/конвертация.pdf",
     image: "/images/firstphoto.png",
   },
-
 ];

@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { articles } from "../data/articles";
+import ArticlePDF from "../components/ArticlePDF";
 
 export default function ArticleDetail() {
   const { id } = useParams();
@@ -21,13 +22,7 @@ export default function ArticleDetail() {
       <div className="mb-4">{article.summary}</div>
 
       {article.pdf ? (
-        <div className="w-full h-[80vh] border rounded">
-          <iframe
-            src={article.pdf}
-            className="w-full h-full"
-            title="PDF article"
-          ></iframe>
-        </div>
+        <ArticlePDF file={article.pdf} />
       ) : (
         <div
           className="prose max-w-none"
