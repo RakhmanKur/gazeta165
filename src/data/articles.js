@@ -6,4 +6,11 @@ export const articles = [
     pdf: "/articles/конвертация.pdf",
     image: "/images/firstphoto.png",
   },
+  {
+    id: 'oxygen1',
+    title: "Position for publication",
+    summary: "Basic rules",
+    pdf: "/articles/Rules_for_Publishing.pdf",
+    image: "/images/rules.jfif",
+  },
 ];
