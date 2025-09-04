@@ -13,4 +13,11 @@ export const articles = [
     pdf: "/articles/Rules_for_Publishing.pdf",
     image: "/images/rules.jfif",
   },
+   {
+    id: 'oxygen2',
+    title: "A plastic-free future starts with us",
+    summary: "Plastic pollution in nature and ways to fight it",
+    pdf: "/articles/1research.pdf",
+    image: "/images/plastic.jfif",
+  },
 ];
